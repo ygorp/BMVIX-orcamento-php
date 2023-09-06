@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-login: #cbd5e1;
+    --background-form: #FFFFFF;
+    --background-input: #fecaca;
+    --links-color: #292524;
+    --color-primary: #7f1d1d;
+}
+
+.cadastro {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-login);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--background-form);
+    padding: 1.5rem;
+    width: 30em;
+    height: 25em;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6)
+}
+
+.cadastro h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--links-color);
+    margin-bottom: 1rem;
+}
+#nome,
+#email,
+#senha {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+}
+
+.btns-cadastro {
+    display: flex;
+    gap: 20px;
+}
+
+#btn-cadastro {
+    margin-top: 2rem;
+    width: 180px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--background-form);
+    cursor: pointer;
+}

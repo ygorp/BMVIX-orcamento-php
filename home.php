@@ -24,7 +24,7 @@
     </header>
 
     <main>
-        <form action="" method="post">
+        <form action="" method="post" id="form-orcamento">
             <input type="text" name="nome" id="nome" placeholder="Digite o nome do cliente">
             <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ cliente">
             <label for="relogio">Possui algum relógio:</label>

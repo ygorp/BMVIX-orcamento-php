@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-login: #cbd5e1;
+    --background-form: #FFFFFF;
+    --background-input: #fecaca;
+    --links-color: #292524;
+    --color-primary: #7f1d1d;
+}
+
+.topo-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    padding: 2rem;
+    background-color: var(--background-form);
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.topo-menu img {
+    width: 150px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.menu a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.menu a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.pesquisa input {
+    width: 220px;
+    padding: 7px;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    background-color: var(--background-input);
+}
+
+.pesquisa button {
+    border-radius: 0px 8px 8px 0px;
+    width: 90px;
+    padding: 5px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--background-login);
+    font-size: 16px;
+    cursor: pointer;
+}

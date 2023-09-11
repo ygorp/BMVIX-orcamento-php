@@ -37,7 +37,7 @@
             <input type="text" name="facial" id="facial" placeholder="Vai utilizar facial">
             <input type="text" name="funcionario" id="funcionario" placeholder="Quantos funcionários">
 
-            <input type="submit" value="Gerar Orçamento">
+            <input type="submit" value="Gerar Orçamento" id="btn-orcamento">
         </form>
     </main>
 </body>

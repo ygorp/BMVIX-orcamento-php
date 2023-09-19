@@ -50,8 +50,20 @@
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="inputZip" class="form-label">Possui ControlID:</label>
-                <input type="text" class="form-control" id="inputZip">
+                <label for="controlid" class="form-label">Possui ControlID:</label>
+                <input type="text" class="form-control" id="controlid">
+            </div>
+            <div class="col-md-4">
+                <label for="resticao" class="form-label">Precisa de restrição:</label>
+                <input type="text" class="form-control" id="resticao">
+            </div>
+            <div class="col-md-4">
+                <label for="resticao" class="form-label">Utiliza Banco de horas:</label>
+                <input type="text" class="form-control" id="resticao">
+            </div>
+            <div class="col-md-4">
+                <label for="resticao" class="form-label">Utiliza escala:</label>
+                <input type="text" class="form-control" id="resticao">
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Gerar orçamento</button>

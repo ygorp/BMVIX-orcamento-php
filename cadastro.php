@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="cadastro">
-        <form action="" method="post">
+        <form action="processar_cadastro.php" method="post">
             <h2>Faça seu cadastro!</h2>
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
             <input type="email" name="email" id="email" placeholder="Digite seu email">

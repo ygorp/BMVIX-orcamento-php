@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="login">
-        <form action="" method="post">
+        <form action="processa_login.php" method="post">
             <h2>Faça Login no sistema!</h2>
             <input type="email" name="email" id="email" placeholder="Digite seu email">
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha">

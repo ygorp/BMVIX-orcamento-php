@@ -11,7 +11,7 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 
 // Consultar o banco de dados para verificar as credenciais
-$sql = "SELECT id, nome, senha FROM cadastro WHERE email = ?";
+$sql = "SELECT idcadastro, nome, senha FROM cadastro WHERE email = ?";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "s", $email);
 

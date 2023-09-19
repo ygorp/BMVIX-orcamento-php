@@ -15,6 +15,7 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Orçamentos</a></li>
         </ul>
+        <a href="logout.php" class="logout">Sair</a>
     </header>
 
     <main>

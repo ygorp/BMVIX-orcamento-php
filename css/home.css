@@ -61,63 +61,27 @@ body {
     background-color: var(--background-login);
 }
 
-form {
-    margin-top: 10em;
-    margin-left: 10em;
-    display: flex;
-    flex-direction: column;
+.container {
+    margin-top: 8rem;
     width: 40em;
-    gap: 20px;
-}
-
-form div {
-    display: flex;
-    flex-direction: column;
-}
-
-form input {
-    width: 350px;
-    padding: 8px 10px;
-    border: 1px solid var(--color-primary);
-    border-radius: 10px;
-    background-color: var(--background-form);
-    margin-top: .8rem;
-}
-
-form select {
-    width: 7em;
-    padding: 8px 10px;
-    border-radius: 10px;
-    margin-top: .8rem;
-    border: none;
-    background-color: var(--background-form);
-    border: 1px solid var(--color-primary);
 }
 
 form label {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--links-color);
+    margin-top: 1rem;
 }
 
-.app-facial {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 350px;
-}
-
-.id-rep {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 350px;
-}
-
-.button input {
+.btn-primary {
+    margin-top: 15px;
+    width: 170px;
     background-color: var(--color-primary);
     border: none;
-    color: var(--background-form);
-    font-size: 17px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--links-color);
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMVIX - Home</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/home.css">
 
 </head>
@@ -18,67 +19,46 @@
         <a href="/php/logout.php" class="logout">Sair</a>
     </header>
 
-    <main>
-        <form action="" method="post">
-            <div>
-                <label for="nome">Digite o nome do cliente</label>
-                <input type="text" name="nome" id="nome"> 
+    <main class="container">
+        <form class="row g-3">
+            <div class="col-md-8">
+                <label for="nome" class="form-label">Nome da empresa:</label>
+                <input type="text" class="form-control" id="nome">
             </div>
-            <div>
-                <label for="cnpj">Digite o CNPJ</label>
-                <input type="text" name="cnpj" id="cnpj"> 
+            <div class="col-md-4">
+                <label for="cnpj" class="form-label">CNPJ da empresa:</label>
+                <input type="text" class="form-control" id="cnpj">
             </div>
-            <div>
-                <label for="funcionarios">Quantos funcionarios</label>
-                <input type="text" name="funcionarios" id="funcionarios"> 
+            <div class="col-4">
+                <label for="funcionarios" class="form-label">Quantos funcionários:</label>
+                <input type="text" class="form-control" id="funcionarios">
             </div>
-            <div class="app-facial">
-                <div class="app">
-                    <label for="aplicativo">Vai utilizar aplicativo</label>
-                    <select name="aplicativo" id="aplicativo">
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                </div>             
-                <div class="facial">
-                    <label for="facial">Vai utilizar Facial</label>
-                    <select name="facial" id="facial">
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select> 
-                </div>
-                
+            <div class="col-4">
+                <label for="app" class="form-label">Precisa de aplicativo:</label>
+                <input type="text" class="form-control" id="app">
             </div>
-            <div class="id-rep">
-                <div class="controlid">
-                    <label for="controlid">Possui control ID</label>
-                    <select name="controlid" id="controlid">
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-                </div>
-                
-                <div class="relogio">
-                    <label for="relogio">Possui relógio de ponto</label>
-                    <select name="relogio" id="relogio">
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select> 
-                </div>
+            <div class="col-md-4">
+                <label for="inputCity" class="form-label">Precisa de Facial:</label>
+                <input type="text" class="form-control" id="inputCity">
             </div>
-            
-            <div class="tipo-rep">
-                <label for="tipo">Qual tipo do relógio</label>
-                <select name="tipo" id="tipo">
-                    <option value="inmetro">Inmetro</option>
-                    <option value="naoinmetro">Não Inmetro</option>
-                </select> 
+            <div class="col-md-4">
+                <label for="relogio" class="form-label">Possui algum relógio:</label>
+                <select id="relogio" class="form-select">
+                <option selected>Nenhum...</option>
+                <option>Inmetro</option>
+                <option>Não Inmetro</option>
+                </select>
             </div>
-            
-           <div class="button">
-                <input type="submit" value="Gerar orçamento">
-           </div>
+            <div class="col-md-4">
+                <label for="inputZip" class="form-label">Possui ControlID:</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Gerar orçamento</button>
+            </div>
         </form>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

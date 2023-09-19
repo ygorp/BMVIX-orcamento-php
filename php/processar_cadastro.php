@@ -1,5 +1,5 @@
 <?php
-include "banco.php";
+include "../data/banco.php";
 
 // Verificar a conexão
 if ($conn->connect_error) {

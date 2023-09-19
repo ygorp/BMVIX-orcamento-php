@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMVIX - Home</title>
 
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="../css/home.css">
 
 </head>
 <body>
     <header class="topo">
-        <img src="/img/logo.png" alt="Logo empresa bmvix">
+        <img src="../img/logo.png" alt="Logo empresa bmvix">
         <ul class="menu">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Orçamentos</a></li>
         </ul>
-        <a href="logout.php" class="logout">Sair</a>
+        <a href="/php/logout.php" class="logout">Sair</a>
     </header>
 
     <main>

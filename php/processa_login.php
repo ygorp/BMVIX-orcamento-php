@@ -1,6 +1,6 @@
 <?php
 
-include "banco.php";
+include "../data/banco.php";
 // Verificar se a conexão foi bem-sucedida
 if (!$conn) {
     die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
@@ -28,7 +28,7 @@ if (mysqli_stmt_execute($stmt)) {
             session_start();
             $_SESSION["id"] = $id;
             $_SESSION["nome"] = $nome;
-            header("Location: home.php");
+            header("Location: /php/home.php");
         } else {
             echo "Senha incorreta.";
         }

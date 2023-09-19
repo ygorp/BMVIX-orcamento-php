@@ -64,4 +64,6 @@
     border: none;
     color: var(--background-form);
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }

@@ -29,18 +29,6 @@
                 <label for="cnpj" class="form-label">CNPJ da empresa:</label>
                 <input type="text" class="form-control" id="cnpj">
             </div>
-            <div class="col-4">
-                <label for="funcionarios" class="form-label">Quantos funcionários:</label>
-                <input type="text" class="form-control" id="funcionarios">
-            </div>
-            <div class="col-4">
-                <label for="app" class="form-label">Precisa de aplicativo:</label>
-                <input type="text" class="form-control" id="app">
-            </div>
-            <div class="col-md-4">
-                <label for="inputCity" class="form-label">Precisa de Facial:</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
             <div class="col-md-4">
                 <label for="relogio" class="form-label">Possui algum relógio:</label>
                 <select id="relogio" class="form-select">
@@ -50,13 +38,23 @@
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="controlid" class="form-label">Possui ControlID:</label>
-                <input type="text" class="form-control" id="controlid">
+                <label for="inputCity" class="form-label">Precisa de Facial:</label>
+                <input type="text" class="form-control" id="inputCity">
             </div>
             <div class="col-md-4">
                 <label for="resticao" class="form-label">Precisa de restrição:</label>
                 <input type="text" class="form-control" id="resticao">
             </div>
+            <div class="col-4">
+                <label for="app" class="form-label">Precisa de aplicativo:</label>
+                <input type="text" class="form-control" id="app">
+            </div>
+            
+            <div class="col-md-4">
+                <label for="controlid" class="form-label">Possui ControlID:</label>
+                <input type="text" class="form-control" id="controlid">
+            </div>
+            
             <div class="col-md-4">
                 <label for="resticao" class="form-label">Utiliza Banco de horas:</label>
                 <input type="text" class="form-control" id="resticao">
@@ -65,6 +63,10 @@
                 <label for="resticao" class="form-label">Utiliza escala:</label>
                 <input type="text" class="form-control" id="resticao">
             </div>
+            <div class="col-4">
+                <label for="funcionarios" class="form-label">Quantos funcionários:</label>
+                <input type="text" class="form-control" id="funcionarios">
+            </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Gerar orçamento</button>
             </div>
@@ -72,5 +74,6 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

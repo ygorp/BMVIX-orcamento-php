@@ -20,7 +20,7 @@
     </header>
 
     <main class="container">
-        <form class="row g-3">
+        <form class="row g-3" method="POST" id="form">
             <div class="col-md-8">
                 <label for="nome" class="form-label">Nome da empresa:</label>
                 <input type="text" class="form-control" id="nome">
@@ -38,40 +38,63 @@
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="inputCity" class="form-label">Precisa de Facial:</label>
-                <input type="text" class="form-control" id="inputCity">
+                <label for="facial" class="form-label">Precisa de Facial:</label>
+                <select name="facial" id="facial" class="form-select">
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
             </div>
             <div class="col-md-4">
                 <label for="resticao" class="form-label">Precisa de restrição:</label>
-                <input type="text" class="form-control" id="resticao">
+                <select name="restricao" id="restricao" class="form-select">
+                <option>sim</option>
+                <option>Não</option>
+                </select>
             </div>
             <div class="col-4">
                 <label for="app" class="form-label">Precisa de aplicativo:</label>
-                <input type="text" class="form-control" id="app">
+                <select name="app" id="app" class="form-select">
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
             </div>
             
             <div class="col-md-4">
                 <label for="controlid" class="form-label">Possui ControlID:</label>
-                <input type="text" class="form-control" id="controlid">
+                <select name="controlid" id="controlid" class="form-select">
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
             </div>
             
             <div class="col-md-4">
-                <label for="resticao" class="form-label">Utiliza Banco de horas:</label>
-                <input type="text" class="form-control" id="resticao">
+                <label for="banco" class="form-label">Utiliza Banco de horas:</label>
+                <select name="banco" id="banco" class="form-select">
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
             </div>
             <div class="col-md-4">
-                <label for="resticao" class="form-label">Utiliza escala:</label>
-                <input type="text" class="form-control" id="resticao">
+                <label for="escala" class="form-label">Utiliza escala:</label>
+                <select name="escala" id="escala" class="form-select">
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
             </div>
             <div class="col-4">
                 <label for="funcionarios" class="form-label">Quantos funcionários:</label>
-                <input type="text" class="form-control" id="funcionarios">
+                <select name="funcionarios" id="funcionarios" class="form-select">
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Gerar orçamento</button>
             </div>
         </form>
     </main>
+
+    <div id="resultado"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>

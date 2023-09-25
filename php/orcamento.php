@@ -22,17 +22,20 @@ if ($modelo.value === 'idclass' || 'idface' || 'idflex') {
 } else {
     $tipoSistema = ['secullum web pro', 'secullum web ultimate', 'secullum offline'];
 } if ($app.value === 'sim') {
-    $tipoSistema = 'secullum web pro';
+    $tipoSistema = 'secullum_web_pro';
 } elseif ($app.value === 'sim' && ($facial === 'sim' || $resticao === 'sim')) {
-    $tipoSistema = 'secullum web ultimate';
+    $tipoSistema = 'secullum_web_ultimate';
 } elseif ($modelo === 'outro') {
-    $tipoSistema = 'Secullum offline';
+    $tipoSistema = ['Secullum_off_anual', secullum_off_mensal];
 }
 
 
+if ($funcionarios.value <= 10) {
+    $funcionarios = 
+}
 
 // Execute a consulta no banco de dados
-$sql = "SELECT * FROM $tipoSistema WHERE nome = '$nome' AND email = '$email'";
+$sql = "SELECT * FROM $tipoSistema WHERE nome = $funcionarios";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -9,20 +9,30 @@ if ($conn->connect_error) {
 // Receba os dados do formulário
 $nome = $_POST['nome'];
 $cnpj = $_POST['cnpj'];
-$relogio = $_POST['relogio'];
+$modelo = $_POST['modelo'];
 $facial = $_POST['facial'];
 $resticao = $_POST['resticao'];
 $app = $_POST['app'];
-$controlid = $_POST['controlid'];
-$escala = $_POST['escala'];
 $funcionarios = $_POST['funcionarios'];
 
+$tipoSistema = '';
 
+if ($modelo.value === 'idclass' || 'idface' || 'idflex') {
+    $tipoSistema ='rhid';
+} else {
+    $tipoSistema = ['secullum web pro', 'secullum web ultimate', 'secullum offline'];
+} if ($app.value === 'sim') {
+    $tipoSistema = 'secullum web pro';
+} elseif ($app.value === 'sim' && ($facial === 'sim' || $resticao === 'sim')) {
+    $tipoSistema = 'secullum web ultimate';
+} elseif ($modelo === 'outro') {
+    $tipoSistema = 'Secullum offline';
+}
 
 
 
 // Execute a consulta no banco de dados
-$sql = "SELECT * FROM sua_tabela WHERE nome = '$nome' AND email = '$email'";
+$sql = "SELECT * FROM $tipoSistema WHERE nome = '$nome' AND email = '$email'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -17,6 +17,10 @@ $controlid = $_POST['controlid'];
 $escala = $_POST['escala'];
 $funcionarios = $_POST['funcionarios'];
 
+
+
+
+
 // Execute a consulta no banco de dados
 $sql = "SELECT * FROM sua_tabela WHERE nome = '$nome' AND email = '$email'";
 $result = $conn->query($sql);

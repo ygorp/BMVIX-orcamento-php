@@ -32,9 +32,54 @@
             <div class="col-md-4">
                 <label for="relogio" class="form-label">Possui algum relógio:</label>
                 <select id="relogio" class="form-select">
-                <option selected>Nenhum...</option>
-                <option>Inmetro</option>
-                <option>Não Inmetro</option>
+                <option>Sim</option>
+                <option>Não</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="modelo" class="form-label">Qual modelo:</label>
+                <select class="form-select" aria-label="Disabled select" name="modelo" id="modelo" disabled>
+                    <option selected value="idclass">IDCLASS</option>
+                    <option value="idface">IDFACE</option>
+                    <option value="idflex">IDFLEX</option>
+                    <option value="idacces">IDACCES</option>
+                    <option value="repidx">REP IDX</option>
+                    <option value="rwipointline">RW IPOINTLINE</option>
+                    <option value="henryprisma">HENRY - PRISMA</option>
+                    <option value="henryprismasuperfacil">HENRY - PRISMA SUPER FÁCIL</option>
+                    <option value="henryhexa">HENRY - HEXA</option>
+                    <option value="henryprimmeponto">HENRY - PRIMME PONTO</option>
+                    <option value="henryprimmepontosuperfacil">HENRY - PRIMME PONTO SUPER FÁCIL</option>
+                    <option value="henryhexaadvanced">HENRY - HEXA ADVANCED</option>
+                    <option value="henryprismasuperfaciladvanced">HENRY - PRISMA SUPER FÁCIL ADVANCED</option>
+                    <option value="henrypontoeadvanced">HENRY - PONTO E ADVANCED</option>
+                    <option value="henryprimmeacessoargosprimmesf">HENRY - PRIMME ACESSO/ARGOS/PRIMME SF</option>
+                    <option value="henryprismasuperfaciladvanced671">HENRY - PRISMA SUPER FÁCIL ADVANCED 671</option>
+                    <option value="henryhexaadvanced671">HENRY - HEXA ADVANCED 671</option>
+                    <option value="topdatainnerrep">TOPDATA - INNER REP</option>
+                    <option value="topdatainnerrepplus">TOPDATA - INNER REP PLUS</option>
+                    <option value="topdatainnerponto">TOPDATA - INNER PONTO</option>
+                    <option value="proveukurumim373ii">PROVEU - KURUMIM 373 II</option>
+                    <option value="proveukurumimrep2">PROVEU - KURUMIM REP 2</option>
+                    <option value="proveukurumimrep3">PROVEU - KURUMIM REP 3</option>
+                    <option value="madisrodbelmdrep">MADIS RODBEL - MD REP</option>
+                    <option value="madisrodbelmdrepevo">MADIS RODBEL - MD REP EVO</option>
+                    <option value="madisrodbelrep0705">MADIS RODBEL - REP 0705</option>
+                    <option value="madisrodbelmdevoii">MADIS RODBEL - MD EVO II</option>
+                    <option value="madisrodbelrep0706">MADIS RODBEL - REP 0706</option>
+                    <option value="dimepprintpointii">DIMEP - PRINTPOINT II</option>
+                    <option value="dimepprintpointiii">DIMEP - PRINTPOINT III</option>
+                    <option value="dimepminiprint">DIMEP - MINIPRINT</option>
+                    <option value="dimepsmartprint">DIMEP - SMART PRINT</option>
+                    <option value="dimepsmartpoint">DIMEP - SMART POINT</option>
+                    <option value="trixxrep520">TRIX - XREP 520</option>
+                </select>
+            </div>            
+            <div class="col-md-4">
+                <label for="app" class="form-label">Precisa de aplicativo:</label>
+                <select name="app" id="app" class="form-select">
+                <option>Sim</option>
+                <option>Não</option>
                 </select>
             </div>
             <div class="col-md-4">
@@ -51,37 +96,7 @@
                 <option>Não</option>
                 </select>
             </div>
-            <div class="col-4">
-                <label for="app" class="form-label">Precisa de aplicativo:</label>
-                <select name="app" id="app" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
-                </select>
-            </div>
-            
             <div class="col-md-4">
-                <label for="controlid" class="form-label">Possui ControlID:</label>
-                <select name="controlid" id="controlid" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
-                </select>
-            </div>
-            
-            <div class="col-md-4">
-                <label for="banco" class="form-label">Utiliza Banco de horas:</label>
-                <select name="banco" id="banco" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-                <label for="escala" class="form-label">Utiliza escala:</label>
-                <select name="escala" id="escala" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
-                </select>
-            </div>
-            <div class="col-4">
                 <label for="funcionarios" class="form-label">Quantos funcionários:</label>
                 <select name="funcionarios" id="funcionarios" class="form-select">
                 <option>Sim</option>

@@ -30,16 +30,18 @@
                 <input type="text" class="form-control" id="cnpj">
             </div>
             <div class="col-md-4">
-                <label for="relogio" class="form-label">Possui algum relógio:</label>
+                <label for="relogio" class="form-label">Possui algum relógio?</label>
                 <select id="relogio" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
+                    <option selected>selecione uma opção</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="modelo" class="form-label">Qual modelo:</label>
-                <select class="form-select" aria-label="Disabled select" name="modelo" id="modelo" disabled>
-                    <option selected value="idclass">IDCLASS</option>
+                <label for="modelo" class="form-label">Qual modelo?</label>
+                <select class="form-select" name="modelo" id="modelo" disabled>
+                    <option value="" selected ></option>
+                    <option value="idclass">IDCLASS</option>
                     <option value="idface">IDFACE</option>
                     <option value="idflex">IDFLEX</option>
                     <option value="idacces">IDACCES</option>
@@ -76,32 +78,29 @@
                 </select>
             </div>            
             <div class="col-md-4">
-                <label for="app" class="form-label">Precisa de aplicativo:</label>
+                <label for="app" class="form-label">Precisa de aplicativo?</label>
                 <select name="app" id="app" class="form-select">
                 <option>Sim</option>
                 <option>Não</option>
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="facial" class="form-label">Precisa de Facial:</label>
+                <label for="facial" class="form-label">Precisa de Facial?</label>
                 <select name="facial" id="facial" class="form-select">
                 <option>Sim</option>
                 <option>Não</option>
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="resticao" class="form-label">Precisa de restrição:</label>
+                <label for="resticao" class="form-label">Precisa de restrição?</label>
                 <select name="restricao" id="restricao" class="form-select">
                 <option>sim</option>
                 <option>Não</option>
                 </select>
             </div>
             <div class="col-md-4">
-                <label for="funcionarios" class="form-label">Quantos funcionários:</label>
-                <select name="funcionarios" id="funcionarios" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
-                </select>
+                <label for="funcionarios" class="form-label">Quantos funcionários?</label>
+                <input name="funcionarios" id="funcionarios" class="form-control">
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Gerar orçamento</button>
@@ -113,5 +112,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/select.js"></script>
 </body>
 </html>

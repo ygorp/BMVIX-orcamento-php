@@ -93,3 +93,35 @@ form label {
     border: 2px solid var(--color-primary);
     color: var(--links-color);
 }
+
+#myModal {
+    position: absolute;  
+    width: 50em;
+    top: 180px;
+    left: 250px;
+}
+
+.modal-content {
+    height: 30em;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.titulo_modal {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    color: var(--links-color);
+}
+
+.modal-content p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--links-color);
+    margin-top: 2rem;
+}
+
+.close {
+    font-size: 18px;
+    color: var(--color-primary);
+}

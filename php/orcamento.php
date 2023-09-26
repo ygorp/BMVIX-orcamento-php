@@ -1,56 +1,39 @@
 <?php
-// Conecte-se ao seu banco de dados MySQL
-include "/php/banco.php";
-
-if ($conn->connect_error) {
-    die("Conexão com o banco de dados falhou: " . $conn->connect_error);
-}
 
 // Receba os dados do formulário
 $nome = $_POST['nome'];
 $cnpj = $_POST['cnpj'];
 $modelo = $_POST['modelo'];
 $facial = $_POST['facial'];
-$resticao = $_POST['resticao'];
+$restricao = $_POST['resticao'];
 $app = $_POST['app'];
 $funcionarios = $_POST['funcionarios'];
 
 $tipoSistema = '';
 
-if ($modelo.value === 'idclass' || 'idface' || 'idflex') {
+if ($modelo === 'idclass' || 'idface' || 'idflex') {
     $tipoSistema ='rhid';
 } else {
     $tipoSistema = ['secullum web pro', 'secullum web ultimate', 'secullum offline'];
-} if ($app.value === 'sim') {
-    $tipoSistema = 'secullum_web_pro';
-} elseif ($app.value === 'sim' && ($facial === 'sim' || $resticao === 'sim')) {
-    $tipoSistema = 'secullum_web_ultimate';
+} if ($app === 'sim') {
+    $tipoSistema = 'secullum web pro';
+} elseif ($app === 'sim' && ($facial === 'sim' || $resticao === 'sim')) {
+    $tipoSistema = 'secullum web ultimate';
 } elseif ($modelo === 'outro') {
-    $tipoSistema = ['Secullum_off_anual', secullum_off_mensal];
+    $tipoSistema = ['Secullum offline anual', 'secullum offline mensal'];
 }
 
 
-if ($funcionarios.value <= 10) {
-    $funcionarios = 
-}
+if($tipoSistema === 'secullum web pro' || 'secullum web ultimate' && $funcionarios <= 10) {
+    $valor_por_funcionario = 4.75;
 
-// Execute a consulta no banco de dados
-$sql = "SELECT * FROM $tipoSistema WHERE nome = $funcionarios";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // Encontrei registros correspondentes, retorne os dados
-    $row = $result->fetch_assoc();
     $data = [
-        'nome' => $row['nome'],
-        'email' => $row['email']
+        'nome' => $nome,
+        'cnpj' => $cnpj,
+        'sistema_de_ponto' => $tipoSistema,
+        'valor_orcamento' => $funcionarios * $valor_por_funcionario
     ];
 
     echo json_encode($data);
-} else {
-    // Não encontrou registros correspondentes
-    echo "Nenhum resultado encontrado.";
 }
-
-$conn->close();
 ?>

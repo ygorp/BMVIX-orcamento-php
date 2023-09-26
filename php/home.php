@@ -20,7 +20,7 @@
     </header>
 
     <main class="container">
-        <form class="row g-3" method="POST" id="form">
+        <form class="row g-3" id="form">
             <div class="col-md-8">
                 <label for="nome" class="form-label">Nome da empresa:</label>
                 <input type="text" class="form-control" id="nome">
@@ -75,6 +75,7 @@
                     <option value="dimepsmartprint">DIMEP - SMART PRINT</option>
                     <option value="dimepsmartpoint">DIMEP - SMART POINT</option>
                     <option value="trixxrep520">TRIX - XREP 520</option>
+                    <option value="outros">OUTROS</option>
                 </select>
             </div>            
             <div class="col-md-4">
@@ -103,12 +104,21 @@
                 <input name="funcionarios" id="funcionarios" class="form-control">
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Gerar orçamento</button>
+                <button type="submit" class="btn btn-primary" onclick="processarFormulario()">Gerar orçamento</button>
             </div>
         </form>
     </main>
 
-    <div id="resultado"></div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2 class="titulo_modal">Orçamento</h2>
+            <div id="modalContent">
+            
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>

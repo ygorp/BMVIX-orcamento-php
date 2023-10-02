@@ -23,15 +23,15 @@
         <form class="row g-3" id="form">
             <div class="col-md-8">
                 <label for="nome" class="form-label">Nome da empresa:</label>
-                <input type="text" class="form-control" id="nome">
+                <input type="text" class="form-control" id="nome" name="nome">
             </div>
             <div class="col-md-4">
                 <label for="cnpj" class="form-label">CNPJ da empresa:</label>
-                <input type="text" class="form-control" id="cnpj">
+                <input type="text" class="form-control" id="cnpj" name="cnpj">
             </div>
             <div class="col-md-4">
                 <label for="relogio" class="form-label">Possui algum relógio?</label>
-                <select id="relogio" class="form-select">
+                <select id="relogio" name="relogio" class="form-select">
                     <option selected>selecione uma opção</option>
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
@@ -104,21 +104,17 @@
                 <input name="funcionarios" id="funcionarios" class="form-control">
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary" onclick="processarFormulario()">Gerar orçamento</button>
+                <button type="submit" class="btn btn-primary" id="btnModal" data-toggle="modal" data-target="#ExemploModalCentralizado">Gerar orçamento</button>
             </div>
         </form>
+
+        <!--<div id="exibir_orcamento" class="hidden">-->
+        <div id="modal-body" class="hidden">
+
+        </div>
     </main>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <h2 class="titulo_modal">Orçamento</h2>
-            <div id="modalContent">
-            
-            </div>
-        </div>
-    </div>
+   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>

@@ -94,34 +94,34 @@ form label {
     color: var(--links-color);
 }
 
-#myModal {
-    position: absolute;  
-    width: 50em;
-    top: 180px;
-    left: 250px;
-}
-
-.modal-content {
-    height: 30em;
+#modal-body {
+    display: flex;
+    flex-direction: column;
+    width: 45em;
+    height: 25em;
+    position: absolute;
+    top: 240px;
+    left: 31%;
     padding: 2rem;
     border-radius: 10px;
+    background-color: var(--background-form);
+    box-shadow: 5px 4px 5px 4px rgba(255, 0, 0, 0.2);
 }
 
-.titulo_modal {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 25px;
-    color: var(--links-color);
-}
-
-.modal-content p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--links-color);
-    margin-top: 2rem;
-}
-
-.close {
+#modal-body h4 {
     font-size: 18px;
     color: var(--color-primary);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+#modal-body p {
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: var(--links-color);
+}
+
+.hidden {
+    display: none !important;
 }

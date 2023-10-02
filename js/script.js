@@ -21,7 +21,10 @@ document.getElementById('form').addEventListener('submit', function(event) {
         <p>${data.Sistema_de_ponto}</p>
         <h4>Valor Orçamento:</h4>
         <p>${data.Valor_orcamento}</p>
+
+        <button>Enviar orçamento</button>
       `
+
       modalBody.classList.remove('hidden')
       document.getElementById('form').reset();
   })

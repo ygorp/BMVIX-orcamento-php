@@ -122,6 +122,16 @@ form label {
     color: var(--links-color);
 }
 
+#modal-body button {
+    color: var(--background-login);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 25px;
+    padding: 8px 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .hidden {
     display: none !important;
 }

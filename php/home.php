@@ -81,22 +81,25 @@
             <div class="col-md-4">
                 <label for="app" class="form-label">Precisa de aplicativo?</label>
                 <select name="app" id="app" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
+                <option value="escolha" selected>Escolha uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
                 </select>
             </div>
             <div class="col-md-4">
                 <label for="facial" class="form-label">Precisa de Facial?</label>
                 <select name="facial" id="facial" class="form-select">
-                <option>Sim</option>
-                <option>Não</option>
+                <option value="escolha" selected>Escolha uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
                 </select>
             </div>
             <div class="col-md-4">
                 <label for="resticao" class="form-label">Precisa de restrição?</label>
                 <select name="restricao" id="restricao" class="form-select">
-                <option>sim</option>
-                <option>Não</option>
+                <option value="escolha" selected>Escolha uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
                 </select>
             </div>
             <div class="col-md-4">

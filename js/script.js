@@ -3,7 +3,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
 
   const formData = new FormData(this);
 
-  fetch('orcamentoAPI.php', {
+  fetch('orcamento.php', {
       method: 'POST',
       body: formData
   })

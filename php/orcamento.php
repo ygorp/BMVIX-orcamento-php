@@ -9,49 +9,76 @@ $facial = $_POST['facial'];
 $restricao = $_POST['restricao'];
 $funcionarios = intval($_POST['funcionarios']);
 
-// Determinar o sistema adequado com base nas opções selecionadas
-$options = [
-    'RHID' => "RHID",
-    'Secullum Web Pro' => "Secullum Web Pro",
-    'Secullum Web Ultimate' => "Secullum Web Ultimate",
-    'Secullum Offline Mensal' => "Secullum Offline Mensal",
-    'Secullum Offline Anual' => "Secullum Offline Anual",
-];
+$sistemasDePonto = array(
+    "secullum_web_pro" => array(
+        "caracteristicas" => array("qualquer modelo de relógio", "aplicativo = sim"),
+        "satisfaz" => true
+    ),
+    "secullum_web_ultimate" => array(
+        "caracteristicas" => array("qualquer modelo de relógio", "facial = sim ou restrição = sim"),
+        "satisfaz" => true
+    ),
+    "RHID" => array(
+        "caracteristicas" => array("modelo = idflex, idface, idclass, rep idx, idacess"),
+        "satisfaz" => true
+    ),
+    "secullum_offline" => array(
+        "caracteristicas" => array("qualquer modelo de relógio", "não precisa de app, nem facial, nem restrição"),
+        "satisfaz" => true
+    )
+);
 
-// verificar as seleções
-if (in_array($modelo, ['idclass', 'idflex', 'idface', 'idaccess', 'rep idx'])) {
-    $options = [
-        'RHID' => "RHID",
-    ];
+// Verifique cada sistema de ponto
+foreach ($sistemasDePonto as $sistema => $info) {
+    $satisfaz = true;
+
+    // Verifique cada característica do sistema
+    foreach ($info["caracteristicas"] as $caracteristica) {
+        // Verifique se a característica é satisfeita com base nos dados do formulário
+        if ($caracteristica === "qualquer modelo de relógio" && $relogio === "nao") {
+            $satisfaz = false;
+            break;
+        } elseif ($caracteristica === "aplicativo = sim" && $app === "Não") {
+            $satisfaz = false;
+            break;
+        } elseif ($caracteristica === "facial = sim" && $facial === "Não") {
+            $satisfaz = false;
+            break;
+        } elseif ($caracteristica === "restrição = sim" && $restricao === "Não") {
+            $satisfaz = false;
+            break;
+        } elseif (strpos($caracteristica, "modelo =") === 0) {
+            $modelo = substr($caracteristica, 8);
+            if ($modelo !== $modelo) {
+                $satisfaz = false;
+                break;
+            }
+        }
+    }
+
+    // Se todas as características foram satisfeitas, adicione o sistema à lista de selecionados
+    if ($satisfaz) {
+        $sistemasSelecionados[] = $sistema;
+    }
 }
 
-if ($app === 'sim') {
-    $options = [
-        'Secullum Web Pro' => "Secullum Web Pro",
-    ];
+// Se não houver sistemas selecionados, indique Secullum Web Pro e RHID
+if (empty($sistemasSelecionados)) {
+    $sistemasSelecionados = array("secullum_web_pro", "RHID");
 }
 
-if ($facial === 'Sim' || $restricao === 'Sim') {
-    // Mantenha apenas a opção Secullum Web Ultimate
-    $options = [
-        'Secullum Web Ultimate' => "Secullum Web Ultimate",
-    ];
-}
+return $sistemasSelecionados;
 
-if ($app === 'Não' && $facial === 'Não' && $restricao === 'Não') {
-    $options = [
-        'Secullum Offline' => "Secullum Offline",
-    ];
-}
 
-$sistemaPonto = reset($options);
+// Inicialize um array para armazenar os sistemas que se encaixam nas características fornecidas
+$sistemasSelecionados = array();
 
 // Calcular o valor do orçamento com base no sistema e na quantidade de funcionários
 $valorTotal = 0;
 $valorTotalMensal = 0;
 $valorTotalAnual = 0;
 
-if ($sistemaPonto === "Secullum Web Pro") {
+if ($sistemasSelecionados === "secullum_web_pro") {
     if ($funcionarios <= 10) {
         $valorTotal = 80.00;
     } elseif ($funcionarios >=11 && $funcionarios <= 20) {
@@ -65,7 +92,7 @@ if ($sistemaPonto === "Secullum Web Pro") {
     }
 }
 
-if ($sistemaPonto === "Secullum Web Ultimate") {
+if ($sistemasSelecionados === "secullum_web_ultimate") {
     if ($funcionarios <= 10) {
         $valorTotal = 89.00;
     } elseif ($funcionarios >=11 && $funcionarios <= 50) {
@@ -77,7 +104,7 @@ if ($sistemaPonto === "Secullum Web Ultimate") {
     }
 }
 
-if ($sistemaPonto === "RHID") {
+if ($sistemasSelecionados === "RHID") {
     if ($funcionarios <= 50) {
         $valorTotal = 80.00;
     } elseif ($funcionarios <= 100) {
@@ -91,7 +118,7 @@ if ($sistemaPonto === "RHID") {
     }
 }
 
-if ($sistemaPonto === "Secullum Offline") {
+if ($sistemasSelecionados === "secullum_offline") {
     if ($funcionarios <= 30) {
         $valorTotalMensal = 80.00;
         $valorTotalAnual = 620.00;
@@ -110,18 +137,18 @@ if ($sistemaPonto === "Secullum Offline") {
 $valorOrcamento = null;
 
 // Determine a chave com base no sistema de ponto
-if (in_array($sistemaPonto, ['RHID', 'Secullum Web Pro', 'Secullum Web Ultimate'])) {
+if (in_array($sistemasSelecionados, ['RHID', 'secullum_web_pro', 'secullum_web_ultimate'])) {
     $data = [
         'Nome' => $nomeEmpresa,
         'CNPJ' => $cnpjEmpresa,
-        'Sistema_de_ponto' => $sistemaPonto,
+        'Sistema_de_ponto' => $sistemasSelecionados,
         'Valor_orcamento' => $valorTotal
     ];
-} elseif ($sistemaPonto === 'Secullum Offline') {
+} elseif ($sistemasSelecionados === 'secullum_offline') {
     $data = [
         'Nome' => $nomeEmpresa,
         'CNPJ' => $cnpjEmpresa,
-        'Sistema_de_ponto' => $sistemaPonto,
+        'Sistema_de_ponto' => $sistemasSelecionados,
         'Valor_orcamento_mensal' => $valorTotalMensal,
         'Valor_orcamento_anual' => $valorTotalAnual
     ];
